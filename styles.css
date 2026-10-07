@@ -151,7 +151,12 @@ button:focus-visible {
   text-wrap: balance;  /* keeps "you." from sitting alone on the last line */
   margin-bottom: .45em;
 }
-.lede { font-size: 1.15rem; max-width: 36ch; }
+.hero__sub {
+  font: italic 400 clamp(1.35rem, 3.6vw, 1.7rem)/1.3 var(--display);
+  max-width: 30ch;
+  margin-bottom: 1em;
+}
+.lede { font-size: 1.1rem; max-width: 40ch; }
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -262,12 +267,6 @@ button:focus-visible {
 .tiers { display: grid; gap: 14px; margin: 26px 0 22px; }
 .tier { border: 1px solid var(--tan); padding: 18px 22px 20px; }
 .tier--sage { background: var(--sage); }
-.tier__num {
-  margin: 0 0 2px;
-  font: italic 500 1.1rem var(--display);
-  color: var(--gold);
-}
-.tier--sage .tier__num { color: var(--ink); }
 .tier__head {
   display: flex;
   flex-wrap: wrap;
@@ -277,8 +276,11 @@ button:focus-visible {
 }
 .tier h3 { font: italic 400 1.9rem/1.15 var(--display); }
 .tier__price { margin: 0; font: 500 1.6rem var(--display); }
-.tier__spec { margin: 6px 0 0; font-size: .93rem; color: var(--muted); }
-.tier--sage .tier__spec { color: var(--ink); }
+.tier__sub { margin: 2px 0 0; font: italic 400 1.1rem var(--display); color: var(--muted); }
+.tier__spec { margin: 12px 0 2px; font-size: .95rem; }
+.tier__desc { margin: 0; font-size: .95rem; color: var(--muted); }
+.tier--sage .tier__sub,
+.tier--sage .tier__desc { color: var(--ink); }
 
 .sub { margin: 40px 0 6px; font: italic 400 1.6rem var(--display); color: var(--gold); }
 
@@ -323,6 +325,9 @@ button:focus-visible {
 .creds li { padding: 8px 0; border-top: 1px solid var(--tan); }
 
 /* ---------- questions ---------- */
+
+.list--sentences li { font-size: clamp(1.2rem, 3vw, 1.35rem); line-height: 1.4; }
+.note-line { font: italic 400 1.3rem/1.45 var(--display); }
 
 .qa > div { padding: 18px 0 4px; border-top: 1px solid var(--tan); }
 .qa h3 { margin-bottom: .35em; }
