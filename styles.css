@@ -131,7 +131,9 @@ button:focus-visible {
 }
 .nav__links { display: flex; align-items: center; gap: 1.4rem; }
 .nav__links a { padding: 12px 0; font-size: .95rem; font-weight: 400; text-decoration: none; }
-.nav__cta { text-decoration: underline !important; text-underline-offset: 5px; }
+/* menu links only underline when you point at them (or tab to them) */
+.nav__links a:hover,
+.nav__links a:focus-visible { text-decoration: underline; text-underline-offset: 5px; }
 
 /* ---------- hero ---------- */
 
